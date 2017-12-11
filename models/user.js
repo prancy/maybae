@@ -3,10 +3,11 @@ const Schema = mongoose.Schema;
 const findOrCreate = require('mongoose-find-or-create');
 
 var userSchema = new mongoose.Schema({
-  first_name: String,
-  last_name: String,
+  firstName: String,
+  lastName: String,
   email: String,
-  password_digest: String
+  passwordDigest: String
+  orders: [{type: mongoose.Schema.Types.ObjectId, ref: 'Order'}]
 }, {
   timestamps: true
 });

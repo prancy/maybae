@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import {Link, Switch, Route} from 'react-router-dom';
 import './App.css';
+import NavBar1 from '../../components/NavBar1/NavBar1';
+import NavBar2 from '../../components/NavBar2/NavBar2';
 
+/*------ state initializer -----*/
 
-
-
-
-
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      products: []
+    }
+  }
 
 
   /*---------- Helper Methods ----------*/
@@ -15,18 +21,17 @@ import './App.css';
 
   /*-------- lifecycle methods ----------*/
 
-class App extends Component {
+
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <NavBar1 />
+        <NavBar2 />
+        <Switch>
+        </Switch>
       </div>
-    );
+    )
   }
 }
 
