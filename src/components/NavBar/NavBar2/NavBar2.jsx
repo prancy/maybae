@@ -16,7 +16,7 @@ const NavBar2 = () => {
         <li><Link to="/eyeshadow">Eyeshadow</Link></li>
         <li><Link to="/mascara">Mascara</Link></li>
         Lips
-        <li><Link to="/lip_liner">Lipliner</Link></li>
+        <li><Link to="/lip_liner">Lip Liner</Link></li>
         <li><Link to="/lipstick">Lipstick</Link></li>
         Nails
         <li><Link to="/nail_polish">Nail Polish</Link></li>
