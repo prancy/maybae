@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './NavBar1.css';
 
+
 const NavBar1 = (props) => {
   let nav = props.user ?
     <div>

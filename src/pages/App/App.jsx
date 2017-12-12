@@ -9,6 +9,7 @@ import userService from '../../utils/userService';
 import ProductIndexPage from '../ProductIndexPage/ProductIndexPage';
 import ProductShowPage from '../ProductShowPage/ProductShowPage';
 import Footer from '../../components/Footer/Footer';
+import Catalog from '../../components/Catalog/Catalog';
 
 /*------ state initializer -----*/
 
@@ -62,16 +63,6 @@ class App extends Component {
                   user={this.state.user}
                 />
               }/>
-              <Route exact path='/products' render={() =>
-                <ProductIndexPage
-                  user={this.state.user}
-                />
-              }/>
-              <Route exact path='/products/`${api.id}`' render={() =>
-                <ProductShowPage
-                  user={this.state.user}
-                />
-              }/>
               <Route exact path='/signup' render={(props) => 
                 <SignupPage
                   {...props}
@@ -84,9 +75,10 @@ class App extends Component {
                   handleLogin={this.handleLogin}
                 />
               }/>
-              <Route exact path='/:category' render={() =>
-                <ProductIndexPage
+              <Route exact path='/:category' render={(props) =>
+                <ProductIndexPage {...props}
                   user={this.state.user}
+                  products={this.state.products}
                 />
               }/>
             </Switch>

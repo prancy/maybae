@@ -1,0 +1,13 @@
+NavBar1 {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 90vh;
+	max-width: 70px;
+	margin: 0 auto;
+	margin-top: 5vh;
+	-webkit-perspective: 1000;
+	perspective: 1000;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}

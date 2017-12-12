@@ -1,13 +1,14 @@
-import React, {Component} from 'react';
-// import './ProductIndexPage.css';
+import React from 'react';
+import Catalog from '../../components/Catalog/Catalog'
 
-class ProductIndexPage extends Component {
-  render() {
-    return(
-      <div>this is productIndexPage
-      </div>
-    );
-  }
+const ProductIndexPage = (props) => {
+  console.log(props.match.params)
+  return (
+    <div>
+      <br></br>ProductIndexPage<br></br><br></br>
+      <Catalog products={props.products}/>
+    </div>
+  )
 }
 
 export default ProductIndexPage;
