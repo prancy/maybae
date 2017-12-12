@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import './App.css';
-import NavBar1 from '../../components/NavBar/NavBar1/NavBar1';
-import NavBar2 from '../../components/NavBar/NavBar2/NavBar2';
+import NavBar from '../../components/NavBar/NavBar'
 import WelcomePage from '../WelcomePage/WelcomePage';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import ProductIndexPage from '../ProductIndexPage/ProductIndexPage';
+import Footer from '../../components/Footer/Footer';
 
 /*------ state initializer -----*/
 
@@ -18,8 +18,6 @@ class App extends Component {
       products: []
     }
   }
-
-
 
   /*---------- Helper Methods ----------*/
 
@@ -52,16 +50,19 @@ class App extends Component {
         <Router>
           <div>
             <div>
-              <NavBar1
+              <NavBar
                 user={this.state.user}
                 handleLogout={this.handleLogout}
               />
-              <NavBar2 />
             </div>
-          
             <Switch>
               <Route exact path='/' render={() =>
                 <WelcomePage
+                  user={this.state.user}
+                />
+              }/>
+              <Route exact path='/products' render={() =>
+                <ProductIndexPage
                   user={this.state.user}
                 />
               }/>
@@ -83,10 +84,9 @@ class App extends Component {
                 />
               }/>
             </Switch>
-            
-
+            <Footer
+            />
           </div>
-          
         </Router>
       </div>
     )

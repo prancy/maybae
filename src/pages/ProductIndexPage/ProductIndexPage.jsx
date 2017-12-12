@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 class ProductIndexPage extends Component {
   render() {
     return(
-      <div>Hello
+      <div>this is productIndexPage
       </div>
     );
   }
