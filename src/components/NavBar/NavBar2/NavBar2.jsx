@@ -19,11 +19,7 @@ const NavBar2 = () => {
         <li><Link to="/lipstick">Lipstick</Link></li>
         Nails
         <li><Link to="/nailpolish">Nail Polish</Link></li>
-      </ul>
-      
-      
-      
-      
+      </ul>    
     </div>
     
   )

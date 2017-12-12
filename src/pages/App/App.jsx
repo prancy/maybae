@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import './App.css';
-import NavBar1 from '../../components/NavBar1/NavBar1';
-import NavBar2 from '../../components/NavBar2/NavBar2';
+import NavBar1 from '../../components/NavBar/NavBar1/NavBar1';
+import NavBar2 from '../../components/NavBar/NavBar2/NavBar2';
 import WelcomePage from '../WelcomePage/WelcomePage';
-import BlushPage from '../BlushPage/BlushPage';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
+import ProductIndexPage from '../ProductIndexPage/ProductIndexPage';
 
 /*------ state initializer -----*/
 
@@ -49,35 +49,44 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar1 />
-        <NavBar2 />
         <Router>
-          <Switch>
-            <Route exact path='/' render={() =>
-              <WelcomePage
+          <div>
+            <div>
+              <NavBar1
                 user={this.state.user}
                 handleLogout={this.handleLogout}
               />
-            }/>
-            <Route exact path='/blush' render={() =>
-              <BlushPage
-                user={this.state.user}
-                handleLogout={this.handleLogout}
-              />
-            }/>
-            <Route exact path='/signup' render={(props) => 
-              <SignupPage
-                {...props}
-                handleSignup={this.handleSignup}
-              />
-            }/>
-            <Route exact path='/login' render={(props) => 
-              <LoginPage
-                {...props}
-                handleLogin={this.handleLogin}
-              />
-            }/>
-          </Switch>
+              <NavBar2 />
+            </div>
+          
+            <Switch>
+              <Route exact path='/' render={() =>
+                <WelcomePage
+                  user={this.state.user}
+                />
+              }/>
+              <Route exact path='/signup' render={(props) => 
+                <SignupPage
+                  {...props}
+                  handleSignup={this.handleSignup}
+                />
+              }/>
+              <Route exact path='/login' render={(props) => 
+                <LoginPage
+                  {...props}
+                  handleLogin={this.handleLogin}
+                />
+              }/>
+              <Route exact path='/:category' render={() =>
+                <ProductIndexPage
+                  user={this.state.user}
+                />
+              }/>
+            </Switch>
+            
+
+          </div>
+          
         </Router>
       </div>
     )
