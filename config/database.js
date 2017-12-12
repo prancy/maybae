@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-mongoose.connect("mongod://localhost/maybae", {useMongoClient: true});
+mongoose.connect("mongodb://localhost/maybae", {useMongoClient: true});
 
 var db = mongoose.connection;
 
