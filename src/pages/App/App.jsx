@@ -7,6 +7,7 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import ProductIndexPage from '../ProductIndexPage/ProductIndexPage';
+import ProductShowPage from '../ProductShowPage/ProductShowPage';
 import Footer from '../../components/Footer/Footer';
 
 /*------ state initializer -----*/
@@ -63,6 +64,11 @@ class App extends Component {
               }/>
               <Route exact path='/products' render={() =>
                 <ProductIndexPage
+                  user={this.state.user}
+                />
+              }/>
+              <Route exact path='/products/`${api.id}`' render={() =>
+                <ProductShowPage
                   user={this.state.user}
                 />
               }/>
