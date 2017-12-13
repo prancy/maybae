@@ -1,32 +1,14 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
+import ProductShow from '../../components/ProductShow/ProductShow'
 
-class ProductShowPage extends Component {
-  constructor(props) {
-    super();
-    this.state = {
-      products: {}
-    }
-  }
+const ProductIndexPage = (props) => {
+  return (
+    <div>
+      <br></br>ProductShowPage<br></br><br></br>
+      <ProductShow products={props.products} id={props.match.params.id}/>
+    </div>
+  )
+}
 
-  componentDidMount() {
-    fetch("http://makeup-api.herokuapp.com/api/v1/products.json")
-      .then(product => product.json())
-      .then(product => this.setState({products: product}))
-  }
-
-  getProduct = (product) => {
-    
-  }
-
-  render() {
-    return (
-      <div>
-        this is the product show page
-      </div>
-    );
-  }
-};
-
-export default ProductShowPage;
+export default ProductIndexPage;
 
