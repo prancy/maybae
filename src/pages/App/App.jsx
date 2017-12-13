@@ -1,15 +1,23 @@
+//importing the basics
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
-import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import userService from '../../utils/userService';
+
+//components
 import NavBar from '../../components/NavBar/NavBar'
+import Footer from '../../components/Footer/Footer';
+import Catalog from '../../components/Catalog/Catalog';
+import ProductShow from '../../components/ProductShow/ProductShow';
+
+//pages
+import './App.css';
 import WelcomePage from '../WelcomePage/WelcomePage';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
-import userService from '../../utils/userService';
 import ProductIndexPage from '../ProductIndexPage/ProductIndexPage';
 import ProductShowPage from '../ProductShowPage/ProductShowPage';
-import Footer from '../../components/Footer/Footer';
-import Catalog from '../../components/Catalog/Catalog';
+
+
 
 /*------ state initializer -----*/
 
@@ -17,7 +25,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      products: []
+      products: [],
     }
   }
 
@@ -77,6 +85,12 @@ class App extends Component {
               }/>
               <Route exact path='/:category' render={(props) =>
                 <ProductIndexPage {...props}
+                  user={this.state.user}
+                  products={this.state.products}
+                />
+              }/>
+              <Route exact path='/products/:id' render={(props) =>
+                <ProductShowPage {...props}
                   user={this.state.user}
                   products={this.state.products}
                 />
