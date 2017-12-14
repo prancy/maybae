@@ -44,6 +44,25 @@ class App extends Component {
     this.setState({user: null});
   }
 
+  addWishList = (props) => {
+    console.log('this is in app.jsx', this.state.products);
+    console.log('this is the user', this.state.user)
+    fetch('/products/like',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          apiId: this.state.products.id,
+          name: this.state.products.name,
+          image: this.state.products.image_link,
+          user: this.state.user
+        }),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+  })
+  }
+
   /*-------- lifecycle methods ----------*/
   componentDidMount() {
     let user = userService.getUser();
@@ -52,7 +71,6 @@ class App extends Component {
       .then(product => product.json())
       .then(product => {
         this.setState({products: product})
-        console.log('this.state =', this.state)
       })
   }
 
@@ -101,6 +119,7 @@ class App extends Component {
                 <ProductShowPage {...props}
                   user={this.state.user}
                   products={this.state.products}
+                  addWishList={this.addWishList}
                 />
               }/>
             </Switch>

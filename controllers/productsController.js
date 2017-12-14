@@ -1,4 +1,3 @@
-var Product = require('../models/Product');
 
 function getProducts(req, res) {
   Product.find({})
@@ -7,6 +6,12 @@ function getProducts(req, res) {
   })
 }
 
+function addWishList(req, res) {
+  res.body.user
+  console.log(req.body.user)
+}
+
 module.exports = {
-  getProducts
+  getProducts,
+  addWishList
 }
