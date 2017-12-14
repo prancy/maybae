@@ -67,7 +67,7 @@ class App extends Component {
   componentDidMount() {
     let user = userService.getUser();
     this.setState({user})
-    fetch("http://makeup-api.herokuapp.com/api/v1/products.json")
+    fetch("https://makeup-api.herokuapp.com/api/v1/products.json")
       .then(product => product.json())
       .then(product => {
         this.setState({products: product})
