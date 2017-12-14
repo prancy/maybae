@@ -38,16 +38,16 @@ const NavBar = (props) => {
       {nav}
       <div >
       <Navbar right>
-        <NavItem><Link to='/blush'>Blush</Link></NavItem>
-        <NavItem><Link to='/bronzer'>Bronzer</Link></NavItem>
-        <NavItem><Link to='/eyebrow'>Eyebrow</Link></NavItem>
-        <NavItem><Link to='/foundation'>Foundation</Link></NavItem>
-        <NavItem><Link to='/eyeliner'>Eyeliner</Link></NavItem>
-        <NavItem><Link to='/eyeshadow'>Eye Shadow</Link></NavItem>
-        <NavItem><Link to='/mascara'>Mascara</Link></NavItem>
-        <NavItem><Link to='/lip_liner'>Lip Liner</Link></NavItem>
-        <NavItem><Link to='/lipstick'>Lipstick</Link></NavItem>
-        <NavItem><Link to='/nail_polish'>Nail Polish</Link></NavItem>
+        <NavItem className='a'><Link to='/blush'>Blush</Link></NavItem>
+        <NavItem className='a'><Link to='/bronzer'>Bronzer</Link></NavItem>
+        <NavItem className='a'><Link to='/eyebrow'>Eyebrow</Link></NavItem>
+        <NavItem className='a'><Link to='/foundation'>Foundation</Link></NavItem>
+        <NavItem className='a'><Link to='/eyeliner'>Eyeliner</Link></NavItem>
+        <NavItem className='a'><Link to='/eyeshadow'>Eye Shadow</Link></NavItem>
+        <NavItem className='a'><Link to='/mascara'>Mascara</Link></NavItem>
+        <NavItem className='a'><Link to='/lip_liner'>Lip Liner</Link></NavItem>
+        <NavItem className='a'><Link to='/lipstick'>Lipstick</Link></NavItem>
+        <NavItem className='a'><Link to='/nail_polish'>Nail Polish</Link></NavItem>
       </Navbar>
     </div>
     </div>

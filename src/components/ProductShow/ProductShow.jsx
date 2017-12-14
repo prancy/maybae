@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import 'react-router-dom';
 
 // props.product.filter(product) => product.product_type === :catalog in browser thingy
 
@@ -10,7 +10,8 @@ const Product = (props) => {
     <div>
         {props.products.length > 0 ?
         <div>This is where the product should actually show,{product.name}</div>
-        : <h2>LOADING</h2>}
+        : <h2>We're Working on Getting those Products for You!</h2>
+        } 
     </div>
   )
 }

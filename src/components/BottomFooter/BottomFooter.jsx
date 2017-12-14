@@ -4,7 +4,7 @@ import {Footer} from 'react-materialize';
 const BottomFooter = () => {
   return(
     <div>
-      <Footer copyrights="&copy 2015 Copyright Text"
+      <Footer copyrights="2017 ❤Made With Glitter, Spice and Everything Nice"
 	      moreLinks={
 		      <a className="grey-text text-lighten-4 right" href="#!">More Links</a>
 	      }

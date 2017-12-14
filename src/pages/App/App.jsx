@@ -6,8 +6,6 @@ import userService from '../../utils/userService';
 //components
 import NavBar from '../../components/NavBar/NavBar'
 import BottomFooter from '../../components/BottomFooter/BottomFooter';
-import Catalog from '../../components/Catalog/Catalog';
-import ProductShow from '../../components/ProductShow/ProductShow';
 
 //pages
 import './App.css';
@@ -99,8 +97,7 @@ class App extends Component {
                 />
               }/>
             </Switch>
-            <BottomFooter
-            />
+            <BottomFooter/>
           </div>
         </Router>
       </div>

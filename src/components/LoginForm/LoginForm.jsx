@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import userService from '../../utils/userService';
-import {Parallax} from 'react-materialize';
+import 'react-materialize';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -32,6 +32,7 @@ class LoginForm extends Component {
 
   render() {
     return (
+      <div>
       <div className="container">
         <header className="header-footer">Log In</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
@@ -47,12 +48,13 @@ class LoginForm extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12 text-center">
-              <button className="btn btn-default">Log In</button>&nbsp;&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+              <button className="btn pink lighten-3">Log In</button>&nbsp;&nbsp;&nbsp;
+              <button className="btn pink lighten-3"><Link to='/'>Cancel</Link></button>
             </div>
           </div>
         </form>
       </div>
+    </div>
     );
   }
 };

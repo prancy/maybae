@@ -1,6 +1,6 @@
 import React from 'react';
 import './WelcomePage.css';
-import {Parallax, row, header} from 'react-materialize';
+import {Parallax} from 'react-materialize';
 
 const WelcomePage = (props) => {
   return (

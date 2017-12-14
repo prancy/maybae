@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {Card, CardTitle, Col, Row} from 'react-materialize';
+import {Card, Col, Row} from 'react-materialize';
 
 // props.product.filter(product) => product.product_type === :catalog in browser thingy
 
@@ -23,7 +23,7 @@ const Products = (props) => {
             }
         </Row>
         : 
-        <h2>LOADING</h2>
+        <div>LOADING</div>
         }
     </div>
   )
