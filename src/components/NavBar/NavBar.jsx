@@ -10,7 +10,7 @@ const NavBar = (props) => {
       <div>
         <nav className="pink lighten-3">
           <div className="NavBar1">
-            <a href="/" className="brand-logo center">MayBae</a>
+            <Link to="/" className="brand-logo center">MayBae</Link>
             <ul className="right">
               <li><a href="sass.html">❤ Wish List</a></li>
               <li><Link to="" className='NavBar1-link' onClick={props.handleLogout} >LOG OUT</Link></li>
@@ -22,19 +22,19 @@ const NavBar = (props) => {
       :
       <div>
         <nav className="pink lighten-3">
-          <a href="/" className="brand-logo center">MayBae</a>
+          <Link to="/" className="brand-logo center">MayBae</Link>
           <div className="NavBar right">
             <ul>
               <li><Link to="sass.html">❤ Wish List</Link></li>
-              <li><Link to="/login" className='NavBar1-link'>LOG IN</Link></li>
-              <li><Link to="/signup" className='NavBar1-link'>SIGN UP</Link></li>
+              <li><Link to="/login" className='NavBar1-link'>Log In</Link></li>
+              <li><Link to="/signup" className='NavBar1-link'>Register</Link></li>
             </ul>
           </div>
         </nav>
       </div>;
   
   return (
-    <div className='NavBar'>
+    <div className='a'>
       {nav}
       <div >
       <Navbar right>

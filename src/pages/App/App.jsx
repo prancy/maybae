@@ -5,7 +5,7 @@ import userService from '../../utils/userService';
 
 //components
 import NavBar from '../../components/NavBar/NavBar'
-import Footer from '../../components/Footer/Footer';
+import BottomFooter from '../../components/BottomFooter/BottomFooter';
 import Catalog from '../../components/Catalog/Catalog';
 import ProductShow from '../../components/ProductShow/ProductShow';
 
@@ -99,7 +99,7 @@ class App extends Component {
                 />
               }/>
             </Switch>
-            <Footer
+            <BottomFooter
             />
           </div>
         </Router>
