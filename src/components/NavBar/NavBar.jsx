@@ -12,7 +12,7 @@ const NavBar = (props) => {
           <div className="NavBar1">
             <Link to="/" className="brand-logo center">MayBae</Link>
             <ul className="right">
-              <li><a href="sass.html">❤ Wish List</a></li>
+              <li><a href="/profile">❤ Wish List</a></li>
               <li><Link to="" className='NavBar1-link' onClick={props.handleLogout} >LOG OUT</Link></li>
               <li><span className='NavBar1-welcome'>WELCOME, {props.user.name}<br/></span></li>
             </ul>
@@ -25,7 +25,6 @@ const NavBar = (props) => {
           <Link to="/" className="brand-logo center">MayBae</Link>
           <div className="NavBar right">
             <ul>
-              <li><Link to="sass.html">❤ Wish List</Link></li>
               <li><Link to="/login" className='NavBar1-link'>Log In</Link></li>
               <li><Link to="/signup" className='NavBar1-link'>Register</Link></li>
             </ul>

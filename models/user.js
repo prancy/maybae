@@ -3,10 +3,17 @@ var bcrypt = require('bcrypt');
 
 const SALT_ROUNDS = 6;
 
+var productSchema = new Schema({
+  apiId: String,
+  name: String,
+  image: String
+});
+
 var userSchema = new mongoose.Schema({
   name: String,
   email: {type: String, required: true, lowercase: true, unique: true},
-  password: String
+  password: String,
+  products: [productSchema]
 }, {
   timestamps: true
 });

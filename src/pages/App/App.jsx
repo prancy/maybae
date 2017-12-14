@@ -14,6 +14,7 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import ProductIndexPage from '../ProductIndexPage/ProductIndexPage';
 import ProductShowPage from '../ProductShowPage/ProductShowPage';
+import ProfilePage from '../ProfilePage/ProfilePage';
 
 
 
@@ -82,6 +83,12 @@ class App extends Component {
                 <LoginPage
                   {...props}
                   handleLogin={this.handleLogin}
+                />
+              }/>
+              <Route exact path='/profile' render={(props) =>
+                <ProfilePage {...props}
+                  user={this.state.user}
+                  handleLogout={this.handleLogout}
                 />
               }/>
               <Route exact path='/:category' render={(props) =>
