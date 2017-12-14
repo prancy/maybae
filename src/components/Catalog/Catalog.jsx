@@ -7,7 +7,7 @@ import {Card, CardTitle, Col, Row} from 'react-materialize';
 const Products = (props) => {
   return (
     <div>
-        {props.products ?
+        {props.products.length > 0 ?
         //filter takes in a function and checks to see if product.product_type matches props.category, 
         //then .map method goes through each item in the array and changes it to however you want, //it changes depending on the function - for this instance
         // we are changing it to a list item where we list product.name
