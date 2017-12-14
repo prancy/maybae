@@ -46,7 +46,6 @@ class App extends Component {
 
   addWishList = (props) => {
     console.log('this is in app.jsx', this.state.products);
-    console.log('this is the user', this.state.user)
     fetch('/products/like',
       {
         method: 'POST',
