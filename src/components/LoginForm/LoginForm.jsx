@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import userService from '../../utils/userService';
+import {Parallax} from 'react-materialize';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <header className="header-footer">Log In</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">

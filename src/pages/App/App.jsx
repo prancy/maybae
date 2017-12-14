@@ -51,7 +51,10 @@ class App extends Component {
     this.setState({user})
     fetch("http://makeup-api.herokuapp.com/api/v1/products.json")
       .then(product => product.json())
-      .then(product => this.setState({products: product}))
+      .then(product => {
+        this.setState({products: product})
+        console.log('this.state =', this.state)
+      })
   }
 
   render() {

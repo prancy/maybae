@@ -11,9 +11,20 @@ const Products = (props) => {
         //filter takes in a function and checks to see if product.product_type matches props.category, 
         //then .map method goes through each item in the array and changes it to however you want, //it changes depending on the function - for this instance
         // we are changing it to a list item where we list product.name
-        <Row>{props.products.filter(product => product.product_type === props.category).map((product, pIdx) => <Col m={4}><Card key={pIdx}>
-          <Link to={`/products/${product.id}`}>{product.name}<img src={product.image_link}/></Link></Card></Col>)}</Row>
-        : <h2>LOADING</h2>}
+        <Row>
+          {props.products.filter(product => product.product_type === props.category).map((product, pIdx) => 
+            <Col m={4}>
+              <Card key={pIdx}>
+                <Link to={`/products/${product.id}`}>
+                  {product.name}<img src={product.image_link}/>
+                </Link>
+              </Card>
+            </Col>)
+            }
+        </Row>
+        : 
+        <h2>LOADING</h2>
+        }
     </div>
   )
 }
