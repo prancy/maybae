@@ -14,11 +14,12 @@ const Products = (props) => {
         <Row>
           {props.products.filter(product => product.product_type === props.category).map((product, pIdx) => 
             <Col m={4}>
-              <Card key={pIdx}>
-                <Link to={`/products/${product.id}`}>
-                  {product.name}
-                  <img src={product.image_link} alt="Smiley face" height="100" width="100"/>
-                </Link>
+              <Card title={product.name} key={pIdx}>
+                <div className="center">
+                  <Link to={`/products/${product.id}`}>
+                    <img src={product.image_link} height="200" width="200"/>
+                  </Link>
+                </div>
               </Card>
             </Col>)
             }

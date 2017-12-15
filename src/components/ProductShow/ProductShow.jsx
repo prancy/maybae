@@ -2,7 +2,6 @@ import React from 'react';
 import 'react-router-dom';
 import {Button, Card} from 'react-materialize';
 
-// props.product.filter(product) => product.product_type === :catalog in browser thingy
 
 const Product = (props) => {
   var product = props.products.filter(product => product.id === Number(props.id))[0]
@@ -14,7 +13,7 @@ const Product = (props) => {
             <div>
             <Card title={product.name}>
               <div className="center">
-              <br/><br/><img src={product.image_link}/></div><br/>
+              <br/><br/><img src={product.image_link} height="300" width="300"/></div><br/>
               <p>{product.description}</p><br/><br/>
               <Button onClick={() => props.addWishList(product)}>Add to Wishlist</Button>
             </Card>
