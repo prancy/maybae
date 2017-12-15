@@ -22,7 +22,7 @@ app.use(require('./config/auth'))
 
 // Put API routes here, before the "catch all" route
 app.use('/', require('./routes/products'));
-// app.use('/api/products', require('./routes/ad')
+app.use('/api/products', require('./routes/products'));
 app.use('/api/users', require('./routes/api/users'));
 
 // The following "catch all" route is necessary for

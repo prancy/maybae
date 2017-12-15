@@ -44,18 +44,19 @@ class App extends Component {
     this.setState({user: null});
   }
 
-  addWishList = (props) => {
-    console.log('this is in app.jsx', this.state.products);
+  addWishList = (product) => {
+    console.log('this is in app.jsx', product);
     fetch('/products/like',
       {
-        method: 'POST',
+        method: 'post',
         body: JSON.stringify({
-          apiId: this.state.products.id,
-          name: this.state.products.name,
-          image: this.state.products.image_link,
+          apiId: product.id,
+          name: product.name,
+          image: product.image_link,
           user: this.state.user
         }),
         headers: {
+          'Content-Security-Policy': 'block-all-mixed-content',
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         }
