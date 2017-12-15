@@ -7,6 +7,7 @@ import {Card, Col, Row} from 'react-materialize';
 const Products = (props) => {
   return (
     <div className="productIndex">
+    <br/>
         {props.products.length > 0 ?
         //filter takes in a function and checks to see if product.product_type matches props.category, 
         //then .map method goes through each item in the array and changes it to however you want, //it changes depending on the function - for this instance
@@ -25,7 +26,7 @@ const Products = (props) => {
             }
         </Row>
         : 
-        <div>LOADING</div>
+        <div><h2 className="center">We're Working on It!</h2><center><img src="https://i.imgur.com/8L2CwzP.gif" /></center></div>
         }
     </div>
   )
