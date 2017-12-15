@@ -56,7 +56,6 @@ class App extends Component {
           user: this.state.user
         }),
         headers: {
-          'Content-Security-Policy': 'block-all-mixed-content',
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         }

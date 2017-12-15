@@ -6,7 +6,7 @@ const Product = require('./../models/Product');
 
 const fetch = require("node-fetch");
 const url =
-  "http://makeup-api.herokuapp.com/api/v1/products.json";
+  "https://makeup-api.herokuapp.com/api/v1/products.json";
 fetch(url)
   .then(response => {
     response.json().then(json => {
