@@ -27,7 +27,7 @@ function login(req, res) {
 }
 
 function profil(req, res) {
-  console.log(req.user)
+  console.log('res.user');
   res.json(req.user.wishList)
 }
 /*----- Helper Functions -----*/

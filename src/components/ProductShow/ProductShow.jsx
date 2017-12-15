@@ -1,6 +1,6 @@
 import React from 'react';
 import 'react-router-dom';
-import {Button} from 'react-materialize';
+import {Button, Card} from 'react-materialize';
 
 // props.product.filter(product) => product.product_type === :catalog in browser thingy
 
@@ -8,14 +8,24 @@ const Product = (props) => {
   var product = props.products.filter(product => product.id === Number(props.id))[0]
   
   return (
-    <div className="productShow">
-        {props.products.length > 0 ?
-        <div>This is where the product should actually show,{product.name}, <img src={product.image_link}/><Button onClick={() => props.addWishList(product)}>Add to Wishlist</Button></div>
-        : <h2>We're Working on Getting those Products for You!</h2>
-        } 
+    <div className="container">
+      <div className="productShow">
+          {props.products.length > 0 ?
+            <div>
+            <Card title={product.name}>
+              <div className="center">
+              <br/><br/><img src={product.image_link}/></div><br/>
+              <p>{product.description}</p><br/><br/>
+              <Button onClick={() => props.addWishList(product)}>Add to Wishlist</Button>
+            </Card>
+            </div>
+          : <h2>We're Working on Getting those Products for You!</h2>
+          } 
+      </div>
     </div>
   )
 }
+
 
 
 export default Product;

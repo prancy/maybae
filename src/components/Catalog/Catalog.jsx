@@ -16,7 +16,8 @@ const Products = (props) => {
             <Col m={4}>
               <Card key={pIdx}>
                 <Link to={`/products/${product.id}`}>
-                  {product.name}<img src={product.image_link}/>
+                  {product.name}
+                  <img src={product.image_link} alt="Smiley face" height="100" width="100"/>
                 </Link>
               </Card>
             </Col>)

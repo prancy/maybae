@@ -12,7 +12,7 @@ class Wishlist extends Component {
   }
 
   componentDidMount() {
-    console.log(tokenService.getToken())
+    console.log(this.props.user)
       fetch('/api/users/wishlist', {
       headers: {
         'Accept' : 'application/json',
@@ -26,7 +26,6 @@ class Wishlist extends Component {
   }
 
   render() {
-    console.log(this.state.wishlist)
     return (
       <div>
         {this.state.wishList ? <p>{this.state.wishList[0].name}</p>
