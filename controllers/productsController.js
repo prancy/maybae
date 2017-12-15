@@ -8,18 +8,14 @@ function getProducts(req, res) {
 }
 
 function addWishList(req, res) {
-  console.log("Sam is lyin")
-  return res.json({test: 'hello'})
-
-  
   User.findOne({_id: req.body.user._id}, (err, user) => {
-    if (!user.wishList.some(product => product.id === req.body.apiId)) {
-      user.wishList.push({name: req.body.name, id: req.body.apiId})
+    if (!user.wishlist.some(product => product.id === req.body.apiId)) {
+      user.wishlist.push({name: req.body.name, id: req.body.apiId})
       user.save((err, data) =>{
         if (err) {
-          res.status(500).send(err)
+          res.status(500).json(err)
         }
-        res.status(200).send(data)
+        res.status(200).json(data)
       })
     }
   })

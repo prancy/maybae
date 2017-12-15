@@ -14,7 +14,7 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import ProductIndexPage from '../ProductIndexPage/ProductIndexPage';
 import ProductShowPage from '../ProductShowPage/ProductShowPage';
-import ProfilePage from '../ProfilePage/ProfilePage';
+import WishListPage from '../WishListPage/WishListPage';
 
 
 
@@ -45,7 +45,6 @@ class App extends Component {
   }
 
   addWishList = (product) => {
-    console.log('this is in app.jsx', product);
     fetch('/products/like',
       {
         method: 'post',
@@ -102,8 +101,8 @@ class App extends Component {
                   handleLogin={this.handleLogin}
                 />
               }/>
-              <Route exact path='/profile' render={(props) =>
-                <ProfilePage {...props}
+              <Route exact path='/wishlist' render={(props) =>
+                <WishListPage {...props}
                   user={this.state.user}
                   handleLogout={this.handleLogout}
                 />

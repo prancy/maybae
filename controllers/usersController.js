@@ -26,6 +26,10 @@ function login(req, res) {
   }).catch(err => res.status(401).json(err));
 }
 
+function profil(req, res) {
+  console.log(req.user)
+  res.json(req.user.wishList)
+}
 /*----- Helper Functions -----*/
 
 function createJWT(user) {
@@ -38,5 +42,6 @@ function createJWT(user) {
 
 module.exports = {
   signup,
-  login
+  login,
+  profil
 };
