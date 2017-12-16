@@ -4,8 +4,7 @@ import {Card, Col, Row} from 'react-materialize';
 
 const Products = (props) => {
   return (
-    <div className="productIndex">
-    <br/>
+    <div className="productIndex"><br/><br/>
       {props.products.length > 0 ?
         <Row>
           {props.products.filter(product => product.product_type === props.category).map((product, pIdx) => 
