@@ -27,7 +27,7 @@ function login(req, res) {
 }
 
 function profil(req, res) {
-  console.log('res.user');
+  User.findById(req.user._id).then(user => res.json(user.wishlist))
   res.json(req.user.wishList)
 }
 /*----- Helper Functions -----*/
